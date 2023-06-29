@@ -41,7 +41,7 @@ export default async function Home({ searchParams }) {
         <section className="container mx-auto w-full my-8 flex justify-center items-center ">
           <div className="grid  sm:grid-cols-2 md:grid-cols-4 gap-4">
             {allcars.map((car) => (
-              <CarCard Car={car} />
+              <CarCard key={"1"} Car={car} />
             ))}
           </div>
         </section>
