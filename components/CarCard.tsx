@@ -31,20 +31,20 @@ const CarCard = ({ Car }: CarCardProps) => {
   } = Car;
 
   return (
-    <div className=" container px-4 md:px-0 mx-auto">
-      <div className="card w-80 h-80 sm:w-72 bg-base-100 shadow-xl">
-        <figure>
+    <div className="mx-auto">
+      <div className="card w-72 sm:w-60 md:w-56 h-80 md:mx-auto bg-base-100 shadow-xl">
+        <figure className="">
           <Image
             src={generateCarImageURL(Car)}
             alt="car-image"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             priority
-            className="object-contain pt-2"
+            className="object-contain pt-3"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
+          <h2 className="card-title text-base md:text-sm">
             {make} {model}
           </h2>
 

@@ -41,7 +41,7 @@ const SearchBar = () => {
 
   return (
     <form action="" onSubmit={handleSubmit}>
-      <div className="flex flex-col md:flex-row gap-2">
+      <div className="flex flex-row  gap-2">
         <SearchManufacturer
           manufacturer={manufacturer}
           setmanufacturer={setmanufacturer}
@@ -51,7 +51,7 @@ const SearchBar = () => {
           <input
             type="text"
             placeholder="Model"
-            className="input w-full max-w-xs"
+            className="input w-40 sm:w-full max-w-xs"
             value={model}
             onChange={(e) => {
               setmodel(e.target.value);

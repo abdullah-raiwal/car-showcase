@@ -22,24 +22,26 @@ export default async function Home({ searchParams }) {
       <Hero />
       <div className="">
         {/* text for car catalouge */}
+
         <div className="py-4 ">
           <h1 className="font-semibold text-3xl pb-4">Cars Catalouge</h1>
           <h2 className="font-thin">Explore the cars you might like</h2>
         </div>
 
         {/* filters like search, fuel, and year */}
-        <div className="flex flex-row justify-between items-center px-6">
+
+        <div className="flex flex-col sm:flex-row justify-between items-center  gap-2 sm:gap-0">
           <SearchBar />
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-row gap-3 justify-between items-center">
             <CustomFilter name="Fuel" options={fuels} />
             <CustomFilter name="Year" options={yearsOfProduction} />
           </div>
         </div>
       </div>
-
+      {/* renders cars card list */}
       {!isDataEmpty ? (
-        <section className="container mx-auto w-full my-8 flex justify-center items-center ">
-          <div className="grid  sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <section className="w-full my-8 ">
+          <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 md:gap-y-6 ">
             {allcars.map((car) => (
               <CarCard key={"1"} Car={car} />
             ))}

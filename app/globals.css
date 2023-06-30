@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+html{
+   
+    background-color: 'bg-base-200';
+}
