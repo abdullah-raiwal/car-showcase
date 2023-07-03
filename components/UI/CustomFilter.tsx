@@ -36,11 +36,12 @@ const CustomFilter = ({ options, name }: CustomFilterProps) => {
   return (
     <div>
       <select
+
         className="select w-full max-w-xs"
         value={selectedValue}
         onChange={handleSelect}
       >
-        <option disabled selected>
+        <option disabled selected value={name}>
           {name}
         </option>
         {options.map((option, index) => (
